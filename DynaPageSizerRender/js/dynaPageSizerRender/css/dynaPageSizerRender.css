@@ -1,0 +1,119 @@
+* {
+	text-rendering: geometricprecision !important;
+	/* 部分内容不换行问题*/
+	/* 会拆分单词 */
+	word-break: break-all;
+	/* 不会拆分单词 */
+	/*word-wrap:break-word;*/
+
+	font-size: 17px !important;
+	line-height: 30px;
+	box-sizing: border-box;
+}
+
+html, body, div {
+	padding: 0px;
+	margin: 0px;
+}
+
+._web_dynami_root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.pageBlock {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	/* debug 显示坐标用*/
+	position: relative;
+	page-break-after:always;
+}
+.containerBlock {
+	/*border: 1px #0037ff solid;*/
+	/*padding: 10px;*/
+}
+
+u {
+	white-space: break-spaces;
+}
+
+/* test css*/
+._web_dynami_root > * {
+	margin: 10px !important;
+}
+.debug_axise {
+	opacity: 0.3;
+	border: 2px rgb(10, 255, 255) solid;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+.debug_axise.containerBlock {
+	border: 2px rgb(3, 243, 59) solid;
+}
+.debug_axise.pageBlock {
+	border: 2px rgb(243 3 3) solid;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+	display: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.close-icon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+}
+.close-icon::before,
+.close-icon::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 12px;
+	height: 2px;
+	background-color: black;
+	transition: background-color 0.3s ease;
+}
+.close-icon:hover::before,
+.close-icon:hover::after {
+	background-color: red;
+}
+.close-icon::before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.close-icon::after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+.containerBlock .contentBlock:first-child {
+	margin-top: unset;
+}
+
+.contentBlock {
+	margin-top: 5px;
+}
+
+
+/* 打印样式 */
+@media print {
+	html {
+		-webkit-print-color-adjust: exact;
+	}
+	._web_dynami_root > * {
+		margin: 0px !important;
+	}
+/*	.pageBlock,.containerBlock {
+		border: 0px;
+	}*/
+	.no-print, .debug_axise, .close-icon {
+		display: none !important;
+	}
+}
+

@@ -1,0 +1,248 @@
+body {
+	background-color: #E6E9EE;
+	overflow: auto;
+}
+
+.pageBlock {
+	background-color: white;
+	padding: 80px;
+}
+
+.exam_name {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.page_seal_line {
+	border-bottom: black 1px dashed;
+	text-align: center;
+	padding-top: 25px;
+	width: 100%;
+}
+
+.header {
+	width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.typeNodeBlock.choice > ._dyna_children_content {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	/*border: 1px solid;*/
+}
+
+.typeNodeBlock.choice > ._dyna_children_content .groupBlock.choice > ._dyna_children_content {
+	display: flex;
+	flex-direction: column;
+	margin: 0px 10px;
+}
+
+.choice .option {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+}
+
+.fillInTheBlankBlock > .content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.fillInTheBlankBlock .fillInTheBlank_column:last-child:hover .control {
+	display: inline-block;
+}
+
+.fillInTheBlank_column .control {
+	display: none;
+	position: absolute;
+	right: 15px;
+	top: 5px;
+}
+
+.fillInTheBlank_column {
+	min-width: 50px;
+	width: 100px;
+	border-bottom: 1px solid black;
+	resize: horizontal;
+	overflow: hidden;
+	outline: none;
+	display: list-item;
+	margin-left: 5px;
+	position: relative;
+}
+
+.typeNodeBlock .answeringAreaContentBlock {
+	border: 1px #2066D1 dashed;
+}
+
+.content .answer_row {
+	width: 100%;
+	height: 30px;
+}
+
+.content .control_tag {
+	float: right;
+	-moz-user-select: none; /*火狐*/
+	-webkit-user-select: none; /*webkit浏览器*/
+	-ms-user-select: none; /*IE10*/
+	-khtml-user-select: none; /*早期浏览器*/
+	user-select: none;
+	display: inline-block;
+	position: relative;
+}
+
+.content .control_tag .row_operation {
+	width: 30px;
+	display: inline-block;
+	text-align: center;
+	background-color: #0d67c7;
+	height: 26px;
+	line-height: 26px;
+	color: white;
+	cursor: pointer;
+}
+
+.content .control_tag .row_value {
+	width: 28px;
+	line-height: 24px;
+	text-align: center;
+	padding: 0px;
+	border: 0px;
+	border-bottom: 1px #0d67c7 dashed;
+	outline: 0;
+}
+
+.shortAnswerBlock>.content {
+	position: relative;
+	height: 100%;
+}
+
+.upload_image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	padding: 10px;
+	background-color: #f0f0f0;
+	cursor: pointer;
+}
+
+.typeNodeBlock .shortAnswerBlock:hover .upload_image,
+.upload_image:hover {
+	display: block;
+}
+
+.image_drag .image{
+	cursor: move;
+	height: 88%;
+}
+.image_drag {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	resize: both;
+	overflow: hidden;
+	outline: none;
+	top: 0;
+	left: 0;
+	position: absolute;
+	max-width: 95%;
+	max-height: 95%;
+	min-width: 125px;
+	min-height: 125px;
+	border: 1px #0d67c7 dashed;
+}
+.image_drag .content .image_name:hover{
+	border: 1px #0d67c7 dashed;
+}
+.image_drag .content .image_name{
+	cursor: text;
+	white-space: nowrap; /* 只允许一行 */
+	overflow: hidden; /* 溢出隐藏 */
+	text-overflow: ellipsis; /* 超出部分显示省略号 */
+	text-align: center;
+	max-width: 70%; /* 最大宽度不超过父节点的宽度 */
+	min-width: 10%;
+	height: 10%;
+	padding: 0px 5px;
+	display: flex;
+	align-items: center;
+}
+.image_drag .content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.composition_words_control span {
+	display: inline-block;
+	border: 1px solid;
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.composition_words_control .set_words_title {
+	border: unset;
+}
+.composition_words_control ._btn:hover,
+.composition_words_control ._active {
+	background-color: #0d67c7;
+	color: white;
+	border: 1px solid #0d67c7;
+}
+
+.composition_words_control ._btn._input {
+	width: 56px;
+	text-align: center;
+}
+.composition_words_control ._btn._input:hover {
+	background-color: initial;
+	color: initial;
+}
+
+.composition_words {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.composition_words ._word_index {
+	font-size: 12px !important;
+	transform: scale(0.73);
+	position: relative;
+	display: block;
+	top: -12px;
+	right: 5px;
+	cursor: default;
+	line-height: 12px;
+	width: 40px;
+}
+.composition_words ._word_box {
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+.groupBlock {
+	margin-top: unset;
+}

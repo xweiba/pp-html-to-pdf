@@ -1,0 +1,25 @@
+{
+  "name": "Puppeteer-Microservice",
+  "version": "1.0.0",
+  "description": "Puppeteer-Microservice",
+  "main": "puppeteer-microservice.js",
+  "scripts": {
+    "start": "node puppeteer-microservice.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "..."
+  },
+  "keywords": [
+    "Puppeteer"
+  ],
+  "author": "xiaoweiba1028@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "generic-pool": "^3.7.1",
+    "node-uuid": "^1.4.8",
+    "puppeteer": "^10.2.0",
+    "sha1": "^1.1.1"
+  }
+}

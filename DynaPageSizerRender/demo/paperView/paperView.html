@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../js/dynaPageSizerRender/css/dynaPageSizerRender.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/dynaPageSizerRender/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/paperView.css" />
+    <link rel="stylesheet" type="text/css" href="css/paperView-print.css" />
+    <script type="text/javascript" src="../../js/comm/jQuery/jquery-3.0.0.min.js"></script>
+
+    <script type="module" src="js/paperDynaPageSizerRender.js"></script>
+    <script type="module" inline="javascript">
+        /* 浏览器快捷方式添加解除跨域限制参数 -allow-file-access-from-files 否则直接打开会跨域报错*/
+        /* "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" -allow-file-access-from-files */
+		$(function () {
+			PaperDynaPageSizerRender.init();
+		});
+    </script>
+</head>
+<body>
+<div class="paper_view">
+
+</div>
+<div class="template_html" style="display: none;">
+    <div class="testHeaderContentBlock">
+        <div class="header">
+            <div class="exam_name"><span>{paperName}</span></div>
+            <div class="page_seal_line">
+                <div class="student_base_info">
+                    <span class="item">班级：________</span>
+                    <span class="item">姓名：________</span>
+                    <span class="item">考号：________</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="typeNodeBlock">
+        <div class="header">
+            <span class="question_type_name">{name}</span><span class="question_type_score">({points}分)</span>
+        </div>
+    </div>
+    <div class="questionNodeBlock"><div class="content">{quesitonContent}</div></div>
+    <div class="answeringAreaContentBlock">
+        <div class="content">
+            <!-- 添加 indivisible class 的dom，在溢出处理时当只剩下该dom时会自动移动到下一页-->
+            <div class="control_tag indivisible_control">
+                <span class="row_operation" type="sub">-</span>
+                <input class="row_value" type="number" min="{minRows}" max="{maxRows}">
+                <span class="row_operation" type="add">+</span>
+            </div>
+            <div class="answer_rows"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

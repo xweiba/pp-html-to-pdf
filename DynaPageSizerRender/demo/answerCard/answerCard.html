@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../js/dynaPageSizerRender/css/dynaPageSizerRender.css"/>
+    <link rel="stylesheet" type="text/css" href="../../js/dynaPageSizerRender/css/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="css/answerCard.css"/>
+    <link rel="stylesheet" type="text/css" href="css/answerCard-print.css"/>
+    <script type="text/javascript" src="../../js/comm/jQuery/jquery-3.0.0.min.js"></script>
+    <script type="module" src="js/answerCardDynaPageSizerRender.js"></script>
+    <script type="module" inline="javascript">
+		/* 浏览器快捷方式添加解除跨域限制参数 -allow-file-access-from-files 否则直接打开会跨域报错*/
+		/* "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" -allow-file-access-from-files */
+		$(function () {
+			AnswerCardDynaPageSizerRender.init();
+		});
+    </script>
+</head>
+<body>
+<div class="answer_card_root">
+
+</div>
+<div class="template_html" style="display: none;">
+    <div class="testHeaderContentBlock">
+        <div class="header">
+            <div class="exam_name"><span>{paperName}</span></div>
+            <div class="page_seal_line">
+                <div class="student_base_info">
+                    <span class="item">班级：________</span>
+                    <span class="item">姓名：________</span>
+                    <span class="item">考号：________</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="typeNodeBlock {childType}">
+        <div class="header">
+            <span class="question_type_name">{name}</span><span class="question_type_score">({points}分)</span>
+        </div>
+    </div>
+    <div class="groupBlock {childType}"></div>
+    <span class="multipleChoiceBlock indivisible">
+        <div class="content">{content}</div>
+        <span class="option children_template child_axises_item">{content}</span>
+    </span>
+    <span class="judgmentBlock indivisible">
+        <div class="content">{content}</div>
+        <span class="option children_template child_axises_item">{content}</span>
+    </span>
+    <span class="fillInTheBlankBlock">
+        <div class="content">{content}</div>
+        <span class="fillInTheBlank_column children_template child_axises_item indivisible" sequencing={sequencing}>
+        </span>
+    </span>
+    <div class="shortAnswerBlock">
+        <div class="content">
+            <div class="upload_image no-print">点击新增图片</div>
+            <div class="control_tag indivisible_control no-print">
+                <span class="row_operation" type="sub">-</span>
+                <input class="row_value" type="number" min="{minRows}" max="{maxRows}" value="0">
+                <span class="row_operation" type="add">+</span>
+            </div>
+            <div class="answer_rows"></div>
+        </div>
+    </div>
+    <div class="shortAnswerBlock_image">
+        <div class="image_drag child_axises_item" index="{index}">
+            <div class="content">
+                <span class="close-icon" title="删除图片"></span>
+                <img class="image"></img>
+                <span class="image_name allow-bubbling"></span>
+            </div>
+        </div>
+    </div>
+    <span class="compositionBlock">
+        <div class="content">
+            <div class="control_tag composition_words_control no-print">
+                <span class="set_words_title">字数</span>
+                <span class="_btn">500</span>
+                <span class="_btn">800</span>
+                <span class="_btn">1000</span>
+                <span class="_btn _input" contenteditable="true"></span>
+            </div>
+            <div class="composition_words">
+                {content}
+            </div>
+        </div>
+        <span class="_word_box indivisible children_template"></span>
+    </span>
+</div>
+</body>
+</html>

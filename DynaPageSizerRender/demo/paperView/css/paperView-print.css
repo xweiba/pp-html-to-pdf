@@ -1,0 +1,12 @@
+@media print {
+	body {
+		background-color: white;
+	}
+	.control_tag {
+		display: none;
+	}
+
+	.content .answer_row {
+		border-style: none !important;
+	}
+}
