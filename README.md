@@ -1,4 +1,4 @@
-# PP-WebPrint
+# PP-HtmlToPdf 
 
 ## Puppeteer-Microservice
 通过Puppeteer实现HTML转PDF服务，与Chrome中打印功能一致。 使用express实现restFul接口，调用Puppeteer的打印API，完成PDF输出, 使用generic-pool实现多线程处理，线程池可配置。
