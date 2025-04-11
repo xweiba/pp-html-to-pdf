@@ -1,5 +1,5 @@
 # DynaPageSizerRender
-一个前端动态生成自定义大小Html的小框架，以页为单位，将内容字符级自动分页，支持动态修改及坐标位置获取，配合Chrome打印功能，输出A3、A4等各种标准大小的PDF文档，查看示例：PaperView.html
+一个前端动态生成自定义大小Html的小框架，以页为单位，将内容字符级自动分页，支持动态修改及坐标位置获取，配合Chrome打印功能，输出A3、A4等各种标准大小的PDF文档，查看示例：[PaperView.html](demo/paperView/paperView.html)
 
 ## DynaPageSizerRender
 >  入口，构造方法传入Converter和ProxyAdapter实例，业务应只与该对象交互。
