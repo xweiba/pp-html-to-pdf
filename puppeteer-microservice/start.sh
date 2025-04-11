@@ -1,3 +1,4 @@
+#!/bin/bash
 function setVars(){
        serviceName=puppeteer-microservice
        basepath=/user/pp
