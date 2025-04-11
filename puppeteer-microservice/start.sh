@@ -1,10 +1,6 @@
-#!/bin/bash
-#######################
-# created by code on 2020/06/08 16:44:35
-#######################
 function setVars(){
        serviceName=puppeteer-microservice
-       basepath=/home/icampus3.0
+       basepath=/user/pp
        servHome=${basepath}/pkgs/${serviceName}
        start=${servHome}/start.sh   
        log=${basepath}/logs/${serviceName}.log 
