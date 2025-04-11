@@ -34,7 +34,7 @@ yum -y install atk at-spi2-atk libxkbcommon-x11-devel libXcomposite gtk3 alsa-li
 ## 部署源码文件
 
 ```shell
-mkdir -p /home/icampus3.0/pkgs/puppeteer-microservice && cd /home/icampus3.0/pkgs/puppeteer-microservice
+mkdir -p /user/pp/pkgs/puppeteer-microservice && cd /user/pp/pkgs/puppeteer-microservice
 # 上传源码
 unzip puppeteer-microservice.zip
 rm puppeteer-microservice.zip
@@ -92,7 +92,7 @@ module.exports = {
         idleTimeoutMillis: 1000 * 60 * 60, // 页面实例默认一小时重新创建一次
         evictionRunIntervalMillis: 1000 * 60
     },
-    tempRootDir: '/home/icampus3.0/pkgs/puppeteer-microservice/temp',
+    tempRootDir: '/user/pp/pkgs/puppeteer-microservice/temp',
     contextPath: '/microservice/puppeteerservice'
 }
 ```
@@ -103,9 +103,6 @@ stop.sh
 
 ```shell
 #!/bin/bash
-#######################
-# created by code on 2021/10/25
-#######################
 function stop(){
        serviceName=puppeteer-microservice
        local pid=$(ps aux|grep "puppeteer-microservice"|grep -v grep|awk '{print $2}' 2>>/dev/null)
@@ -132,12 +129,9 @@ start.sh
 
 ```shell
 #!/bin/bash
-#######################
-# created by code on 2021/10/25
-#######################
 function setVars(){
        serviceName=puppeteer-microservice
-       basepath=/home/icampus3.0
+       basepath=/user/pp
        jdkHome=${basepath}/jdk8
        servHome=${basepath}/pkgs/${serviceName}
        start=${servHome}/start.sh
